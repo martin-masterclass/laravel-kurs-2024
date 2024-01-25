@@ -19,5 +19,9 @@ class DatabaseSeeder extends Seeder
              'role' => 'admin',
          ]);
          \App\Models\User::factory(10)->create();
+
+        $this->call([
+            CategorySeeder::class,
+        ]);
     }
 }
